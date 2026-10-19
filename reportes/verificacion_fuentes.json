@@ -1,0 +1,148 @@
+{
+  "accesos_tabla": {
+    "filas": 1200,
+    "provincias": [
+      "Buenos Aires",
+      "CABA",
+      "Catamarca",
+      "Chaco",
+      "Chubut",
+      "Corrientes",
+      "Córdoba",
+      "Entre Ríos",
+      "Formosa",
+      "Jujuy",
+      "La Pampa",
+      "La Rioja",
+      "Mendoza",
+      "Misiones",
+      "Neuquén",
+      "Río Negro",
+      "Salta",
+      "San Juan",
+      "San Luis",
+      "Santa Cruz",
+      "Santa Fe",
+      "Santiago Del Estero",
+      "Tierra Del Fuego",
+      "Tucumán"
+    ],
+    "primer_periodo": [
+      2014,
+      1
+    ],
+    "ultimo_periodo": [
+      2026,
+      2
+    ],
+    "cantidad_periodos": 50,
+    "duplicados_por_provincia_periodo": 0,
+    "celdas_vacias": 0,
+    "encabezados": [
+      "Año",
+      "Trimestre",
+      "Provincia",
+      "ADSL",
+      "Cablemodem",
+      "Fibra Optica",
+      "Wireless",
+      "Otros",
+      "Total"
+    ]
+  },
+  "velocidad_historica_tabla": {
+    "filas": 1200,
+    "provincias": [
+      "Buenos Aires",
+      "CABA",
+      "Catamarca",
+      "Chaco",
+      "Chubut",
+      "Corrientes",
+      "Córdoba",
+      "Entre Ríos",
+      "Formosa",
+      "Jujuy",
+      "La Pampa",
+      "La Rioja",
+      "Mendoza",
+      "Misiones",
+      "Neuquén",
+      "Río Negro",
+      "Salta",
+      "San Juan",
+      "San Luis",
+      "Santa Cruz",
+      "Santa Fe",
+      "Santiago Del Estero",
+      "Tierra Del Fuego",
+      "Tucumán"
+    ],
+    "primer_periodo": [
+      2014,
+      1
+    ],
+    "ultimo_periodo": [
+      2026,
+      2
+    ],
+    "cantidad_periodos": 50,
+    "duplicados_por_provincia_periodo": 0,
+    "celdas_vacias": 0,
+    "encabezados": [
+      "Año",
+      "Trimestre",
+      "Provincia",
+      "Mbps (Media de bajada)"
+    ]
+  },
+  "velocidad_api": {
+    "filas": 24,
+    "provincias": [
+      "Buenos Aires",
+      "CABA",
+      "Catamarca",
+      "Chaco",
+      "Chubut",
+      "Corrientes",
+      "Córdoba",
+      "Entre Ríos",
+      "Formosa",
+      "Jujuy",
+      "La Pampa",
+      "La Rioja",
+      "Mendoza",
+      "Misiones",
+      "Neuquén",
+      "Río Negro",
+      "Salta",
+      "San Juan",
+      "San Luis",
+      "Santa Cruz",
+      "Santa Fe",
+      "Santiago Del Estero",
+      "Tierra Del Fuego",
+      "Tucumán"
+    ],
+    "primer_periodo": [
+      2026,
+      2
+    ],
+    "ultimo_periodo": [
+      2026,
+      2
+    ],
+    "cantidad_periodos": 1,
+    "duplicados_por_provincia_periodo": 0,
+    "celdas_vacias": 0,
+    "encabezados": [
+      "Id",
+      "Año",
+      "Trimestre",
+      "Provincia",
+      "Mbps"
+    ]
+  },
+  "diferencias_api_vs_tabla": [],
+  "limite": "API provincial: ultimo periodo. Historial: HTML. CSV directo no verificado."
+}

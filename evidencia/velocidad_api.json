@@ -1,0 +1,170 @@
+[
+  {
+    "Id": 2026204,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Chaco",
+    "Mbps": 159.64
+  },
+  {
+    "Id": 2026206,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Córdoba",
+    "Mbps": 185.64
+  },
+  {
+    "Id": 2026220,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Santa Cruz",
+    "Mbps": 164.82
+  },
+  {
+    "Id": 2026224,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Tucumán",
+    "Mbps": 186.83
+  },
+  {
+    "Id": 2026217,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Salta",
+    "Mbps": 176.16
+  },
+  {
+    "Id": 2026210,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Jujuy",
+    "Mbps": 101.71
+  },
+  {
+    "Id": 2026213,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Mendoza",
+    "Mbps": 222.38
+  },
+  {
+    "Id": 2026222,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Santiago Del Estero",
+    "Mbps": 131.57
+  },
+  {
+    "Id": 2026203,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Catamarca",
+    "Mbps": 176.18
+  },
+  {
+    "Id": 2026219,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "San Luis",
+    "Mbps": 271.93
+  },
+  {
+    "Id": 2026201,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Buenos Aires",
+    "Mbps": 326.87
+  },
+  {
+    "Id": 2026216,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Río Negro",
+    "Mbps": 192.61
+  },
+  {
+    "Id": 2026223,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Tierra Del Fuego",
+    "Mbps": 101.17
+  },
+  {
+    "Id": 2026202,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "CABA",
+    "Mbps": 372.42
+  },
+  {
+    "Id": 2026207,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Corrientes",
+    "Mbps": 178.15
+  },
+  {
+    "Id": 2026209,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Formosa",
+    "Mbps": 151.58
+  },
+  {
+    "Id": 2026208,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Entre Ríos",
+    "Mbps": 142.06
+  },
+  {
+    "Id": 2026214,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Misiones",
+    "Mbps": 168.79
+  },
+  {
+    "Id": 2026212,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "La Rioja",
+    "Mbps": 93.92
+  },
+  {
+    "Id": 2026205,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Chubut",
+    "Mbps": 179.40
+  },
+  {
+    "Id": 2026211,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "La Pampa",
+    "Mbps": 117.55
+  },
+  {
+    "Id": 2026218,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "San Juan",
+    "Mbps": 262.95
+  },
+  {
+    "Id": 2026215,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Neuquén",
+    "Mbps": 270.72
+  },
+  {
+    "Id": 2026221,
+    "Año": 2026,
+    "Trimestre": 2,
+    "Provincia": "Santa Fe",
+    "Mbps": 171.99
+  }
+]

@@ -1,0 +1,148 @@
+{
+  "ultimo_periodo": [
+    2026,
+    2
+  ],
+  "jurisdicciones": 24,
+  "total_accesos": 13768437,
+  "total_fibra": 6900971,
+  "porcentaje_fibra": 50.12167321534027,
+  "base_interanual": 12253770,
+  "crecimiento_interanual_pct": 12.360824464634149,
+  "ejemplos": [
+    {
+      "anio": 2026,
+      "mbps": 326.87,
+      "fecha": "2026-04-01",
+      "provincia": "Buenos Aires",
+      "trimestre": 2,
+      "provincia_id": 1,
+      "accesos_fibra": 2749932,
+      "accesos_totales": 5699031,
+      "total_publicado": 5699031,
+      "diferencia_total": 0,
+      "porcentaje_fibra": 48.25
+    },
+    {
+      "anio": 2026,
+      "mbps": 372.42,
+      "fecha": "2026-04-01",
+      "provincia": "CABA",
+      "trimestre": 2,
+      "provincia_id": 2,
+      "accesos_fibra": 732599,
+      "accesos_totales": 1656933,
+      "total_publicado": 1656933,
+      "diferencia_total": 0,
+      "porcentaje_fibra": 44.21
+    },
+    {
+      "anio": 2026,
+      "mbps": 151.58,
+      "fecha": "2026-04-01",
+      "provincia": "Formosa",
+      "trimestre": 2,
+      "provincia_id": 9,
+      "accesos_fibra": 33882,
+      "accesos_totales": 102829,
+      "total_publicado": 102829,
+      "diferencia_total": 0,
+      "porcentaje_fibra": 32.95
+    }
+  ],
+  "crecimiento_ejemplos": [
+    {
+      "anio": 2026,
+      "fecha": "2026-04-01",
+      "provincia": "Buenos Aires",
+      "trimestre": 2,
+      "provincia_id": 1,
+      "accesos_totales": 5699031,
+      "accesos_hace_un_anio": 5360230,
+      "crecimiento_interanual_pct": 6.32
+    },
+    {
+      "anio": 2026,
+      "fecha": "2026-04-01",
+      "provincia": "CABA",
+      "trimestre": 2,
+      "provincia_id": 2,
+      "accesos_totales": 1656933,
+      "accesos_hace_un_anio": 1481712,
+      "crecimiento_interanual_pct": 11.83
+    },
+    {
+      "anio": 2026,
+      "fecha": "2026-04-01",
+      "provincia": "Formosa",
+      "trimestre": 2,
+      "provincia_id": 9,
+      "accesos_totales": 102829,
+      "accesos_hace_un_anio": 68866,
+      "crecimiento_interanual_pct": 49.32
+    }
+  ],
+  "ranking": [
+    {
+      "anio": 2026,
+      "mbps": 372.42,
+      "fecha": "2026-04-01",
+      "provincia": "CABA",
+      "trimestre": 2,
+      "provincia_id": 2,
+      "accesos_totales": 1656933,
+      "ranking_accesos": 2,
+      "porcentaje_fibra": 44.21,
+      "ranking_velocidad": 1
+    },
+    {
+      "anio": 2026,
+      "mbps": 326.87,
+      "fecha": "2026-04-01",
+      "provincia": "Buenos Aires",
+      "trimestre": 2,
+      "provincia_id": 1,
+      "accesos_totales": 5699031,
+      "ranking_accesos": 1,
+      "porcentaje_fibra": 48.25,
+      "ranking_velocidad": 2
+    },
+    {
+      "anio": 2026,
+      "mbps": 271.93,
+      "fecha": "2026-04-01",
+      "provincia": "San Luis",
+      "trimestre": 2,
+      "provincia_id": 19,
+      "accesos_totales": 192167,
+      "ranking_accesos": 16,
+      "porcentaje_fibra": 43.9,
+      "ranking_velocidad": 3
+    },
+    {
+      "anio": 2026,
+      "mbps": 270.72,
+      "fecha": "2026-04-01",
+      "provincia": "Neuquén",
+      "trimestre": 2,
+      "provincia_id": 15,
+      "accesos_totales": 241919,
+      "ranking_accesos": 11,
+      "porcentaje_fibra": 34.13,
+      "ranking_velocidad": 4
+    },
+    {
+      "anio": 2026,
+      "mbps": 262.95,
+      "fecha": "2026-04-01",
+      "provincia": "San Juan",
+      "trimestre": 2,
+      "provincia_id": 18,
+      "accesos_totales": 156691,
+      "ranking_accesos": 18,
+      "porcentaje_fibra": 70,
+      "ranking_velocidad": 5
+    }
+  ],
+  "crecimiento_nulos": 96
+}

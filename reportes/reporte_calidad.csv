@@ -1,0 +1,41 @@
+﻿control,tabla,errores,estado,detalle
+tabla_no_vacia,provincia,0,OK,24 filas
+nulos_obligatorios,provincia,0,OK,Cada campo obligatorio debe tener valor; cero es valido
+claves_duplicadas,provincia,0,OK,Clave: provincia_id
+tabla_no_vacia,periodo,0,OK,50 filas
+nulos_obligatorios,periodo,0,OK,Cada campo obligatorio debe tener valor; cero es valido
+claves_duplicadas,periodo,0,OK,"Clave: anio, trimestre"
+tabla_no_vacia,tecnologia,0,OK,5 filas
+nulos_obligatorios,tecnologia,0,OK,Cada campo obligatorio debe tener valor; cero es valido
+claves_duplicadas,tecnologia,0,OK,Clave: codigo
+tabla_no_vacia,acceso,0,OK,6000 filas
+nulos_obligatorios,acceso,0,OK,Cada campo obligatorio debe tener valor; cero es valido
+claves_duplicadas,acceso,0,OK,"Clave: provincia_id, anio, trimestre, tecnologia_codigo"
+tabla_no_vacia,velocidad,0,OK,1200 filas
+nulos_obligatorios,velocidad,0,OK,Cada campo obligatorio debe tener valor; cero es valido
+claves_duplicadas,velocidad,0,OK,"Clave: provincia_id, anio, trimestre"
+tabla_no_vacia,total_publicado,0,OK,1200 filas
+nulos_obligatorios,total_publicado,0,OK,Cada campo obligatorio debe tener valor; cero es valido
+claves_duplicadas,total_publicado,0,OK,"Clave: provincia_id, anio, trimestre"
+24_jurisdicciones,provincia,0,OK,23 provincias y CABA
+rango_periodo,periodo,0,OK,Anio >= 2014 y trimestre entre 1 y 4
+continuidad_trimestral,periodo,0,OK,Periodos faltantes: []
+fk_provincia,acceso,0,OK,La provincia referida debe existir
+fk_periodo,acceso,0,OK,El periodo referido debe existir
+rango_numerico,acceso,0,OK,"No negativo, finito y entero si cuenta accesos; sin tope arbitrario de velocidad"
+cobertura_completa,acceso,0,OK,Combinaciones esperadas sin observacion; no se rellenan
+fk_provincia,velocidad,0,OK,La provincia referida debe existir
+fk_periodo,velocidad,0,OK,El periodo referido debe existir
+rango_numerico,velocidad,0,OK,"No negativo, finito y entero si cuenta accesos; sin tope arbitrario de velocidad"
+cobertura_completa,velocidad,0,OK,Combinaciones esperadas sin observacion; no se rellenan
+fk_provincia,total_publicado,0,OK,La provincia referida debe existir
+fk_periodo,total_publicado,0,OK,El periodo referido debe existir
+rango_numerico,total_publicado,0,OK,"No negativo, finito y entero si cuenta accesos; sin tope arbitrario de velocidad"
+cobertura_completa,total_publicado,0,OK,Combinaciones esperadas sin observacion; no se rellenan
+fk_tecnologia,acceso,0,OK,La tecnologia referida debe existir
+suma_vs_total_publicado,acceso,0,OK,Suma de tecnologias contra total de ENACOM
+ceros_publicados,acceso,0,INFO,61 cantidades cero conservadas
+csv_vs_base,acceso,0,OK,Compara claves Y valores: no alcanza con contar filas
+csv_vs_base,velocidad,0,OK,Compara claves Y valores: no alcanza con contar filas
+csv_vs_base,total_publicado,0,OK,Compara claves Y valores: no alcanza con contar filas
+api_vs_base,velocidad,0,OK,24 velocidades de la API contrastadas con la base

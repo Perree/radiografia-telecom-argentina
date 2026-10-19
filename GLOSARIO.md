@@ -1,0 +1,64 @@
+# Glosario del proyecto
+
+- **Dataset (conjunto de datos):** colección de información sobre un tema, organizada para consultarla y analizarla.
+- **CSV:** archivo de texto con filas y columnas separadas por un delimitador, como una coma o un punto y coma.
+- **API:** interfaz que permite que un programa le pida información a otro mediante solicitudes con reglas definidas.
+- **JSON:** formato de texto que organiza información con nombres y valores. Un archivo JSON descargable no demuestra que exista una API de consulta.
+- **Acceso a Internet:** conexión contabilizada por la fuente; no equivale necesariamente a una persona ni a un hogar único.
+- **Mbps:** megabits por segundo; unidad usada para expresar la velocidad de transferencia de datos.
+- **Penetración:** cantidad de accesos en relación con una población de referencia; por ejemplo, accesos por cada 100 hogares. No representa necesariamente el porcentaje de hogares únicos conectados.
+- **Vigencia:** evaluación de si una fuente sigue publicándose y qué período cubren sus datos. La fecha de actualización de una ficha no garantiza que su archivo esté actualizado.
+- **HTML:** formato que estructura una página web; puede contener tablas que un programa puede leer.
+- **Endpoint:** dirección de una operación de una API. Por ejemplo, pedir la velocidad provincial del último trimestre.
+- **GET:** tipo de solicitud web usado para consultar un recurso.
+- **HTTP 200:** respuesta del servidor que indica que atendió correctamente una solicitud; igualmente hay que revisar el contenido.
+- **HTTP 500:** respuesta que indica un error interno del servidor; no demuestra que los datos no existan.
+- **Duplicado por clave:** repetición de la combinación que debería identificar una observación. En estas tablas, provincia más año más trimestre.
+- **Parser:** parte de un programa que lee un formato y reconoce su estructura; acá identifica las filas y columnas de una tabla HTML.
+- **Biblioteca estándar de Python:** herramientas incluidas con Python que podemos usar sin instalar paquetes adicionales.
+- **Ingesta:** traer información desde una fuente al proyecto para poder trabajar con ella.
+- **Dato crudo:** valor original recibido de la fuente, antes de transformarlo.
+- **Limpieza:** transformar formatos y tratar problemas explícitos para analizar los datos; no significa cambiar cifras que parezcan raras.
+- **Formato largo:** organización con una fila por categoría. Acá cada tecnología tiene su propia fila, en lugar de una columna distinta.
+- **Nulo o dato faltante:** ausencia de un valor. Es diferente de cero, que sí es un valor informado.
+- **Trazabilidad:** poder identificar de dónde salió un dato y qué transformaciones recibió.
+- **Hash SHA-256:** huella calculada a partir de los bytes de un archivo para comprobar si son los mismos. No demuestra que sus datos sean correctos.
+- **UTC:** referencia horaria común usada para registrar las ejecuciones sin depender de la zona horaria de la computadora.
+- **Base relacional:** sistema que guarda información en tablas que se pueden vincular mediante campos comunes.
+- **PostgreSQL o Postgres:** programa que administra una base relacional y permite consultarla con SQL.
+- **SQL:** lenguaje para consultar y modificar datos en una base relacional.
+- **Docker:** herramienta para ejecutar un programa junto con su entorno en una unidad llamada contenedor.
+- **Supabase:** plataforma que ofrece una base Postgres administrada en la nube, entre otros servicios.
+- **Esquema:** agrupación lógica de tablas y vistas dentro de una base, como una carpeta.
+- **Clave primaria:** columna o combinación de columnas que identifica una fila sin repetirla.
+- **Clave foránea:** referencia a una clave de otra tabla; exige que esa referencia exista.
+- **Normalización:** organización que separa información según de qué depende, para reducir repeticiones e inconsistencias.
+- **Transacción:** conjunto de cambios que se confirma completo o se revierte si falla.
+- **Restricción:** regla que la base exige, como una clave única, un campo obligatorio o un rango válido.
+- **Vista:** consulta SQL guardada que presenta resultados sin copiar necesariamente sus datos a otra tabla.
+- **CTE:** resultado intermedio con nombre dentro de una consulta, escrito con WITH.
+- **JOIN:** operación que relaciona filas de tablas mediante una condición de coincidencia.
+- **LEFT JOIN:** unión que conserva las filas de la tabla izquierda aunque no encuentre coincidencias a la derecha.
+- **Agregación:** cálculo que resume varias filas, como sumar accesos con SUM.
+- **GROUP BY:** instrucción que define para qué grupos se calcula una agregación.
+- **Función de ventana:** cálculo que puede mirar otras filas relacionadas sin perder la fila actual.
+- **LAG:** función de ventana que recupera el valor de una fila anterior dentro de un orden definido.
+- **PARTITION BY:** separa las filas en grupos independientes para una función de ventana.
+- **RANK:** función que asigna puestos; los empates comparten puesto y dejan un salto posterior.
+- **COALESCE:** devuelve el primer valor no nulo de los indicados.
+- **NULLIF:** devuelve NULL cuando dos valores son iguales; acá evita dividir por cero.
+- **FILTER:** limita qué filas participan de una agregación.
+- **Crecimiento interanual:** cambio respecto del mismo período del año anterior, dividido por el valor de ese año anterior.
+- **Índice:** estructura que ayuda a encontrar filas; ocupa espacio y requiere mantenimiento al cambiar datos.
+- **EXPLAIN ANALYZE:** ejecuta una consulta y muestra el plan real y sus tiempos.
+- **ANALYZE:** actualiza las estadísticas que Postgres usa para elegir cómo ejecutar consultas.
+- **Mediana:** valor central de mediciones ordenadas; ayuda a resumir variaciones.
+- **Seq Scan:** recorrido de la tabla para evaluar sus filas.
+- **Bitmap Index Scan / Bitmap Heap Scan:** búsqueda que usa un índice para localizar filas y luego recupera sus datos de la tabla.
+- **RLS:** control de acceso por fila de Postgres. En este proyecto no habilitamos lectura web de las tablas.
+- **Indicador o KPI:** medida elegida para responder una pregunta relevante, con un alcance y período definidos.
+- **Dimensión:** campo que describe cómo agrupar o filtrar, como provincia y fecha.
+- **Métrica:** cantidad que medimos, como accesos o Mbps.
+- **Promedio ponderado:** promedio donde cada elemento pesa según una cantidad; es distinto de darle igual peso a cada provincia.
+- **Conciliación:** comparación de cifras de dos etapas o fuentes para comprobar que coincidan.
+- **Token de acceso:** credencial para autenticarse ante un servicio; debe mantenerse fuera del código y del repositorio.

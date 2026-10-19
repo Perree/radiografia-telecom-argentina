@@ -1,0 +1,16 @@
+{
+  "mediana_antes_ms": 1.032,
+  "mediana_despues_ms": 0.528,
+  "planes_antes": [
+    "Sort",
+    "Aggregate",
+    "Seq Scan"
+  ],
+  "planes_despues": [
+    "Sort",
+    "Aggregate",
+    "Bitmap Heap Scan",
+    "Bitmap Index Scan"
+  ],
+  "nota": "Tres mediciones por etapa; tiempo de ejecucion del servidor, sin latencia de red. No prueba carga de produccion."
+}

@@ -1,0 +1,94 @@
+{
+  "ejecucion": "20261019T103658277892Z",
+  "consultado_en_utc": "2026-10-19T10:36:58.277892+00:00",
+  "modo": "copia_local",
+  "estado": "completada",
+  "filas_originales": {
+    "accesos": 1200,
+    "velocidad": 1200,
+    "api": 24
+  },
+  "celdas_vacias": {
+    "accesos": 0,
+    "velocidad": 0,
+    "api": 0
+  },
+  "cobertura": {
+    "accesos": {
+      "primer_periodo": [
+        2014,
+        1
+      ],
+      "ultimo_periodo": [
+        2026,
+        2
+      ],
+      "cantidad_periodos": 50,
+      "periodos_con_menos_de_24_jurisdicciones": []
+    },
+    "velocidad": {
+      "primer_periodo": [
+        2014,
+        1
+      ],
+      "ultimo_periodo": [
+        2026,
+        2
+      ],
+      "cantidad_periodos": 50,
+      "periodos_con_menos_de_24_jurisdicciones": []
+    },
+    "api": {
+      "primer_periodo": [
+        2026,
+        2
+      ],
+      "ultimo_periodo": [
+        2026,
+        2
+      ],
+      "cantidad_periodos": 1,
+      "periodos_con_menos_de_24_jurisdicciones": []
+    }
+  },
+  "duplicados_identicos_descartados": {
+    "accesos": 0,
+    "velocidad": 0,
+    "api": 0
+  },
+  "diferencias_totales": [],
+  "diferencias_api": [],
+  "fuentes": [
+    {
+      "url": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-tecnologias-provincias",
+      "archivo": "data\\raw\\20261019T103658277892Z\\accesos.html",
+      "bytes": 299710,
+      "sha256": "b43e2f9bab2fe32a3c65e502198e565f1c9a84da79765f30e6a0ece7bd01c5ea"
+    },
+    {
+      "url": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/velocidad-media-provincias",
+      "archivo": "data\\raw\\20261019T103658277892Z\\velocidad.html",
+      "bytes": 111793,
+      "sha256": "909788c44bede1219c8102cf140d7554f76919799443accab7863c39d195620c"
+    },
+    {
+      "url": "https://indicadores.enacom.gob.ar/DatosAbiertos.asmx/InternetVMDProvinciasUltimoPeriodo",
+      "archivo": "data\\raw\\20261019T103658277892Z\\velocidad_api.json",
+      "bytes": 2922,
+      "sha256": "55ab31c392ac2569c51a2bbcc618a0d4ca17b9af300bf8838f420552426947b0"
+    }
+  ],
+  "origen_local": "evidencia",
+  "nota_fecha": "La fecha es del procesamiento; no de la descarga original.",
+  "claves_sin_correspondencia": {
+    "solo_accesos": [],
+    "solo_velocidad": []
+  },
+  "csv": {
+    "accesos_tecnologia.csv": 6000,
+    "totales_publicados.csv": 1200,
+    "velocidad_historica.csv": 1200,
+    "velocidad_api.csv": 24
+  },
+  "carpeta_csv": "data\\clean\\20261019T103658277892Z"
+}

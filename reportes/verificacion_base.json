@@ -1,0 +1,18 @@
+{
+  "transporte": "conector Supabase",
+  "project_ref": "onsfufyujspxuhbqoxhd",
+  "capturado_en_utc": "2026-10-19T10:37:09.164894+00:00",
+  "conteos": {
+    "provincia": 24,
+    "periodo": 50,
+    "tecnologia": 5,
+    "acceso": 6000,
+    "velocidad": 1200,
+    "total_publicado": 1200
+  },
+  "claves_foraneas": 7,
+  "vistas": 3,
+  "nulos_esperados_crecimiento_primer_anio": 96,
+  "carga": "una transaccion confirmada",
+  "token_personal": "no solicitado, no almacenado, autenticacion HTTP no probada"
+}

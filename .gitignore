@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+data/
+
+# Rutas y notas propias de esta computadora
+docs/NOTAS_LOCALES.md

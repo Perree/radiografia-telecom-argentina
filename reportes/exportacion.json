@@ -1,0 +1,14 @@
+{
+  "capturado_en_utc": "2026-10-19T10:28:44.629187+00:00",
+  "filas": {
+    "v_radiografia": 1200,
+    "v_crecimiento": 1200,
+    "v_ranking": 1200,
+    "tablero": 1200
+  },
+  "ultimo_periodo": [
+    2026,
+    2
+  ],
+  "advertencia": "Los CSV son una foto: el tablero no se actualiza solo."
+}

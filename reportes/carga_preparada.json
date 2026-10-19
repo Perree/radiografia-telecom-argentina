@@ -1,0 +1,15 @@
+{
+  "ingesta": "20261019T112922485876Z",
+  "carpeta": "data\\carga\\20261019T112922485876Z",
+  "lotes": 31,
+  "filas_esperadas": {
+    "provincia": 24,
+    "periodo": 50,
+    "tecnologia": 5,
+    "acceso": 6000,
+    "velocidad": 1200,
+    "total_publicado": 1200
+  },
+  "sha256_sql": "ac6ea49b3ecb2cce9721502bb6c485b27a9c352dd736bc0d20963d7f064a8f40",
+  "estado": "generada_no_ejecutada"
+}

@@ -1,0 +1,42 @@
+{
+  "fecha_utc": "2026-10-19T11:29:22.345833+00:00",
+  "modo": "sin_red_no_actualiza_base",
+  "pasos": [
+    {
+      "programa": [
+        "ingesta.py",
+        "--desde",
+        "evidencia"
+      ],
+      "codigo_salida": 0
+    },
+    {
+      "programa": [
+        "carga.py"
+      ],
+      "codigo_salida": 0
+    },
+    {
+      "programa": [
+        "medir.py",
+        "--solo-resumir"
+      ],
+      "codigo_salida": 0
+    },
+    {
+      "programa": [
+        "calidad.py",
+        "--desde-captura"
+      ],
+      "codigo_salida": 0
+    },
+    {
+      "programa": [
+        "exportar.py",
+        "--desde-captura"
+      ],
+      "codigo_salida": 0
+    }
+  ],
+  "estado": "completado"
+}
