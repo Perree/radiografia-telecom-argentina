@@ -1,10 +1,44 @@
 # Guía de ejecución
 
+## Probar un clon limpio sin token ni Supabase
+
+Desde la carpeta del repositorio, con Python 3.12 o superior:
+
+```powershell
+python -m unittest discover -s tests -v
+python src/ingesta.py --desde evidencia
+python src/carga.py
+python src/medir.py --solo-resumir
+```
+
+Estos comandos comprueban las reglas y los CSV publicados, transforman los originales
+incluidos en `evidencia/`, generan SQL **sin ejecutarlo** y resumen planes de performance
+históricos. No usan credenciales, no consultan Supabase ni realizan mediciones nuevas.
+
+Las seis pruebas de `test_tablero.py` verifican los archivos de `exports/`, que se pueden
+abrir sin una base propia. Las cuatro pruebas de calidad que requieren una captura
+real de la base se omiten si no está disponible; una omisión no cuenta como prueba aprobada.
+
+**Límite verificado en un clon limpio:** `data/` está excluida de Git. Por eso no están
+`data/base_snapshot.json` ni `data/vistas_snapshot.json`. Sin esos archivos,
+`calidad.py --desde-captura`, `exportar.py --desde-captura` y el pipeline completo
+`--sin-red` terminan con `FileNotFoundError`. Los CSV versionados sí están disponibles;
+regenerar las vistas desde la base requiere la ruta conectada descrita más abajo.
+No se generan capturas ficticias ni se presenta el reporte histórico como una consulta nueva.
+
+## Ruta conectada: requiere configuración propia
+
+La ruta siguiente no se ejecutó durante la revisión de publicación: necesita credenciales
+y escribe en la base. Tampoco se verificó la autenticación HTTP con token personal.
+
 ### 1. Requisitos y alcance
 
 Necesitás Python 3.12 o superior y acceso al proyecto nuevo de Supabase. **No hace falta instalar paquetes de Python ni Docker.** El costo cotizado de creación fue USD 0/mes; las condiciones futuras dependen de Supabase.
 
 La referencia pública del único proyecto autorizado está en `proyecto.json`: `onsfufyujspxuhbqoxhd`, región São Paulo. Los programas rechazan una referencia distinta indicada en el entorno. No listan ni consultan otras bases.
+
+El valor `tu_project_ref` de `.env.example` es un placeholder. Para la ruta conectada
+debe reemplazarse por la referencia de tu proyecto y coincidir con `proyecto.json`.
 
 Si reproducís el proyecto en otra cuenta, primero creá un proyecto propio vacío con tu autorización de costos y cambiá conscientemente `proyecto.json` y la referencia del entorno. No apuntes a una base existente que tenga otros datos.
 

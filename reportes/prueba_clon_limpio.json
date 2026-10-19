@@ -1,0 +1,70 @@
+{
+  "commit_base": "ce018a84b68a749fc30758dc69cae8a955ebf363",
+  "metodo": "Dos clones temporales locales fuera del repo. El segundo recibio solo los archivos modificados pendientes de commit, sin data/ ni .env.",
+  "fallos_entorno_iniciales": [
+    "Clon en TEMP de Windows: Permission denied",
+    "Clon sin elevacion: Git no pudo iniciar su proceso interno; funciono con elevacion limitada al clon local."
+  ],
+  "prueba_base": {
+    "tests": {
+      "total": 9,
+      "aprobados": 5,
+      "omitidos": 4
+    },
+    "comandos_ok": [
+      "python src/ingesta.py --desde evidencia",
+      "python src/carga.py",
+      "python src/medir.py --solo-resumir"
+    ],
+    "comandos_fallidos": [
+      {
+        "comando": "python src/calidad.py --desde-captura",
+        "error": "FileNotFoundError: data/base_snapshot.json"
+      },
+      {
+        "comando": "python src/exportar.py --desde-captura",
+        "error": "FileNotFoundError: data/vistas_snapshot.json"
+      },
+      {
+        "comando": "python src/pipeline.py --sin-red",
+        "error": "Se detuvo en calidad.py por falta de data/base_snapshot.json"
+      }
+    ]
+  },
+  "prueba_con_cambios": {
+    "tests": {
+      "total": 15,
+      "aprobados": 11,
+      "omitidos": 4
+    },
+    "comandos_ok": [
+      "python -m unittest discover -s tests -v",
+      "python src/ingesta.py --desde evidencia",
+      "python src/carga.py",
+      "python src/medir.py --solo-resumir"
+    ],
+    "ingesta_con_descarga_nueva": {
+      "comando": "python src/ingesta.py",
+      "codigo_salida": 0,
+      "filas": {
+        "accesos_tecnologia": 6000,
+        "totales_publicados": 1200,
+        "velocidad_historica": 1200,
+        "velocidad_api": 24
+      },
+      "diferencias_totales": 0,
+      "diferencias_api_historial": 0
+    }
+  },
+  "csv_exportados": "Se verificaron los archivos versionados y su coincidencia por clave y valor. No se regeneraron desde la base.",
+  "no_verificado": [
+    "Autenticacion y ejecucion conectada con token personal",
+    "Carga o cambios en Supabase",
+    "Control de calidad de una captura nueva de la base",
+    "Reexportacion desde vistas consultadas nuevamente a Supabase"
+  ],
+  "sin_token": true,
+  "sin_cambios_supabase": true,
+  "sin_comandos_gh": true,
+  "sin_push": true
+}

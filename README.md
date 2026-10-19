@@ -85,7 +85,15 @@ No hace falta configurar una base para revisar los entregables:
 - [Modelo de tablas y decisiones](docs/04_base.md).
 - [Guía de seis pasos para Looker Studio](GUIA_TABLERO.md).
 
-**Estado del tablero:** los CSV y la guía están preparados; todavía no se creó ni publicó un informe en Looker Studio.
+## Tablero
+
+Enlace: PENDIENTE_ENLACE_LOOKER
+
+La captura del tablero irá en `docs/tablero.png`.
+
+La carpeta [`exports/`](exports/) permite ver los resultados sin tener un proyecto
+propio de Supabase. Incluye los CSV de las tres vistas y `tablero.csv`, que las reúne
+por provincia y trimestre.
 
 ## Fuentes y alcance
 

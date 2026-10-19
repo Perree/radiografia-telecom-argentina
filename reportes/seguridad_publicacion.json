@@ -1,0 +1,58 @@
+{
+  "alcance": "Archivos actuales y todos los objetos Git locales, incluidos objetos no alcanzables por ramas.",
+  "repositorio_superficial": false,
+  "commits": 1,
+  "objetos_git": 65,
+  "tipos_objetos": {
+    "blob": 56,
+    "tree": 8,
+    "commit": 1
+  },
+  "archivos_actuales_revisados": 184,
+  "credenciales_detectadas_por_los_patrones": 0,
+  "patrones_sin_coincidencias": [
+    "prefijo sbp",
+    "prefijo JWT eyJ",
+    "clave privada",
+    "clave Supabase secret",
+    "conexion Postgres con password"
+  ],
+  "coincidencias_genericas": {
+    "archivo": "evidencia/supabase_changelog.md",
+    "lineas": [
+      272,
+      288,
+      416,
+      496,
+      980,
+      982,
+      984,
+      1696,
+      1780,
+      1782,
+      1784
+    ],
+    "actuales": 11,
+    "historial": 11,
+    "clasificacion": "Titulos y enlaces del registro publico de cambios de Supabase; no contienen valores de credenciales en las lineas revisadas."
+  },
+  "gitignore_inicial": {
+    ".env": true,
+    ".env.local": true,
+    ".env.production": true,
+    "subcarpeta/.env": true,
+    "subcarpeta/.env.local": true,
+    ".env.example": false,
+    "data/base_snapshot.json": true,
+    "data/carga/salida.sql": true,
+    "exports/tablero.csv": false,
+    "docs/NOTAS_LOCALES.md": true
+  },
+  "protecciones_agregadas": [
+    "*.log",
+    "*.dump",
+    "*.backup",
+    "backups/"
+  ],
+  "limites": "Revision por patrones y clasificacion de coincidencias; no garantiza detectar todo secreto posible. No se consultaron variables de entorno ni servicios privados."
+}

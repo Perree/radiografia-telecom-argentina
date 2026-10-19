@@ -21,6 +21,18 @@ Los CSV ya están preparados. El informe de Looker Studio todavía no fue creado
    debe quedar como dato faltante. Usá dos filtros separados de año y trimestre.
    [Campos calculados](https://cloud.google.com/looker/docs/studio/add-edit-and-troubleshoot-calculated-fields).
 
+   El CSV usa fechas ISO (`2026-04-01` para 2026-T2), punto decimal y celdas vacías
+   para los resultados interanuales sin base. `porcentaje_fibra` y
+   `crecimiento_interanual_pct` ya están en escala 0–100: si usás esas columnas
+   directamente, elegí número decimal y etiquetá la unidad como %. Si elegís formato
+   porcentaje, primero dividilas por 100. Las fórmulas de las tarjetas del paso 4
+   ya devuelven fracciones y sí usan formato porcentaje directamente.
+
+   `mbps` debe ser número decimal, nunca una suma de velocidades. En una tabla
+   por provincia y trimestre usá promedio: hay una sola observación por combinación.
+   Para filtrar un trimestre concreto combiná **año y trimestre**, o usá `fecha`;
+   filtrar solo `trimestre = 2` incluiría el segundo trimestre de todos los años.
+
 3. **Agregar filtros.** Poné una lista de provincias con selección múltiple y controles
    de año y trimestre con selección única. Para comenzar, elegí **2026 y trimestre 2**.
    Los indicadores de volumen son una foto: sumar varios trimestres sumaría conexiones
