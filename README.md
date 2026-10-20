@@ -87,7 +87,7 @@ No hace falta configurar una base para revisar los entregables:
 
 ## Tablero
 
-Enlace: PENDIENTE_ENLACE_LOOKER
+Enlace: [Ver tablero interactivo en Looker Studio](https://datastudio.google.com/reporting/459b62fa-8c6f-4ebd-b4bd-b16a72181dfa)
 
 La captura del tablero irá en `docs/tablero.png`.
 
@@ -137,6 +137,6 @@ El [glosario](GLOSARIO.md) define los términos utilizados.
 
 ## Próximas mejoras
 
-Completar y validar el tablero, verificar la ejecución conectada mediante token personal, incorporar indicadores de penetración con sus cambios metodológicos y automatizar actualizaciones con alertas de calidad.
+Validar el tablero, verificar la ejecución conectada mediante token personal, incorporar indicadores de penetración con sus cambios metodológicos y automatizar actualizaciones con alertas de calidad.
 
 El proyecto se construyó como práctica guiada. La evaluación de comprensión está pendiente; las afirmaciones personales para el CV se definirán después de completarla.

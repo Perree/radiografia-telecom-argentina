@@ -4,7 +4,7 @@
 
 Una página debe permitir responder qué cambió, dónde y en qué período.
 Vamos a mostrar cuatro indicadores, un ranking y una evolución, con títulos y unidades claros.
-Los CSV ya están preparados. El informe de Looker Studio todavía no fue creado en tu cuenta.
+Los CSV ya están preparados. El [tablero en Looker Studio](https://datastudio.google.com/reporting/459b62fa-8c6f-4ebd-b4bd-b16a72181dfa) fue creado por el autor del proyecto. Esta guía documenta cómo reproducirlo.
 
 ## b) Armado en seis pasos
 
