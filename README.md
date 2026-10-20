@@ -28,6 +28,7 @@ Datos correspondientes al **segundo trimestre de 2026**, según la descarga veri
 | Accesos de fibra óptica | **6.900.971** |
 | Participación de fibra sobre el total | **50,12%** |
 | Crecimiento de accesos frente a 2025-T2 | **12,36%** |
+| Velocidad de descarga, promedio simple de las 24 jurisdicciones | **187,79 Mbps** |
 
 Buenos Aires registra **5.699.031 accesos** y un crecimiento interanual del **6,32%**. CABA ocupa el primer puesto de velocidad publicada, con **372,42 Mbps**, y el segundo por cantidad de accesos. Esto muestra por qué tamaño del mercado y velocidad deben analizarse por separado.
 
@@ -87,9 +88,13 @@ No hace falta configurar una base para revisar los entregables:
 
 ## Tablero
 
-Enlace: [Ver tablero interactivo en Looker Studio](https://datastudio.google.com/reporting/459b62fa-8c6f-4ebd-b4bd-b16a72181dfa)
+Enlace: [Ver tablero interactivo en Looker Studio](https://datastudio.google.com/reporting/459b62fa-8c6f-4ebd-b4bd-b16a72181dfa/page/ppbBG)
+
+Está hecho en Looker Studio (Data Studio), lee `exports/tablero.csv` a través de una hoja de Google Sheets con `IMPORTDATA` y abre en el trimestre **2026-T2**.
 
 La captura del tablero irá en `docs/tablero.png`.
+
+![Tablero](docs/tablero.png)
 
 La carpeta [`exports/`](exports/) permite ver los resultados sin tener un proyecto
 propio de Supabase. Incluye los CSV de las tres vistas y `tablero.csv`, que las reúne
@@ -109,15 +114,42 @@ Los accesos **no equivalen a personas ni hogares únicos**. Las velocidades son 
 
 ## Reproducir el trabajo
 
-Se requiere Python 3.12+ y un proyecto propio de Supabase para ejecutar el flujo conectado. Los programas utilizan la biblioteca estándar de Python, sin paquetes adicionales.
+### Prueba local sin credenciales
 
-Con el proyecto y las variables de entorno configurados según la [guía de ejecución](docs/EJECUCION.md):
+Se requiere Python 3.12+ disponible como `python` en la terminal. Los programas utilizan la biblioteca estándar de Python, sin paquetes adicionales. Cloná el repositorio y entrá a su carpeta:
+
+```powershell
+git clone https://github.com/Perree/radiografia-telecom-argentina.git
+cd radiografia-telecom-argentina
+```
+
+Ejecutá estos comandos en orden, sin crear `.env` ni configurar Supabase:
+
+```powershell
+python --version
+python -m unittest discover -s tests -v
+python src/ingesta.py --desde evidencia
+python src/carga.py
+python src/medir.py --solo-resumir
+```
+
+El repositorio contiene 15 tests: en un clon limpio pasan 11 y se omiten cuatro que necesitan una captura de la base. Las nueve pruebas originales están incluidas; una prueba omitida no cuenta como aprobada. La ingesta transforma los originales públicos incluidos en `evidencia/`; la carga solo genera SQL, sin ejecutarlo; la medición solo resume los planes históricos, sin medir otra vez.
+
+Los resultados de `exports/` ya están versionados y pueden abrirse sin credenciales. Las capturas de `data/` no están en Git: por eso el pipeline completo `--sin-red`, los controles `--desde-captura` y la regeneración de exports `--desde-captura` no funcionan en un clon limpio sin obtener antes esas capturas. Esta prueba local no los ejecuta ni genera resultados ficticios.
+
+### Flujo conectado: detenerse aquí si no hay un proyecto y credencial propios
+
+Para la ejecución conectada se necesita un proyecto propio de Supabase. Copiá `.env.example` a `.env`, reemplazá `tu_project_ref_aqui` por la referencia de ese proyecto y asegurate de que coincida con `supabase_project_ref` en `proyecto.json`. Configurá `SUPABASE_ACCESS_TOKEN` con una credencial de administración propia; no es la clave pública de la API de datos. También se pueden usar variables de entorno en lugar de `.env`.
+
+El siguiente comando descarga datos, crea o carga las tablas, prepara las vistas, mide el índice, controla calidad y exporta. **Escribe en la base**; no se ejecutó durante esta revisión. Si no disponés de configuración propia, frená antes de este paso:
 
 ```powershell
 python src/pipeline.py
 ```
 
 Las credenciales se configuran mediante variables de entorno o un `.env` excluido del repositorio; [.env.example](.env.example) muestra los campos necesarios.
+
+La [guía de ejecución](docs/EJECUCION.md) amplía el detalle de cada etapa.
 
 **Validación realizada:** descarga y procesamiento con Python, carga y consultas reales mediante el conector de Supabase, controles y exportaciones. La reproducción local con capturas fue verificada. La autenticación HTTP mediante token personal todavía no se probó; esa limitación está detallada en la guía.
 
@@ -140,3 +172,5 @@ El [glosario](GLOSARIO.md) define los términos utilizados.
 Validar el tablero, verificar la ejecución conectada mediante token personal, incorporar indicadores de penetración con sus cambios metodológicos y automatizar actualizaciones con alertas de calidad.
 
 El proyecto se construyó como práctica guiada. La evaluación de comprensión está pendiente; las afirmaciones personales para el CV se definirán después de completarla.
+
+Licencia: MIT
